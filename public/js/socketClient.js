@@ -5,8 +5,8 @@ const btnSend    = document.getElementById('btnSend');
 
 btnSend.addEventListener( 'click', () => { 
   const message = txtMessage.value;
-  socket.emit( 'sendMessage', message, ( id, payload  ) => { 
-    console.log('desde el server', id, payload);
+  socket.emit( 'sendMessage', message, ( id ) => { 
+    console.log('desde el server', id);
   } );
 })
 
